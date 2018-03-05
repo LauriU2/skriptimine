@@ -1,9 +1,10 @@
 #!/bin/bash
 #
-# muljed ainest skript
+# kasutajate nimekiri kujul Perenimi, Eesnimi
 #
-echo -n "Olen Lauri Uuesoo, " # väljastab ilma reavahetuseta Olen Lauri Uuesoo,
-echo -n "õpin IS117-es ja " # väljastab ilma reavahetuseta õpin IS117-es ja
-echo "aine tundub huvitav, kuid arvan, et läheb raskeks " # väljastab reavahetusega aine tundub huvitav, kuid arvan, et läheb raskeks
+who | cut -f1 -d" " | cut -f2 -d"." > perenimi # lõikame perenime - see on 2. element peale punkti ja salvestame faili
+who | cut -f1 -d" " | cut -f1 -d"." > eesnimi # lõikame eesnime - see on 1. element ennem punkti ja salvestame faili
+paste -d"." perenimi eesnimi > nimed # kleebime need failid vastavas järjekorras kokku
+cat nimed | sort | uniq # sorteerime väljnudi ja võtame korduvad välja
 #
 # skripti lõpp
