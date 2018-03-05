@@ -1,0 +1,9 @@
+#!/bin/bash
+#
+# muljed ainest skript
+#
+echo -n "Olen Lauri Uuesoo, " # väljastab ilma reavahetuseta Olen Lauri Uuesoo,
+echo -n "õpin IS117-es ja " # väljastab ilma reavahetuseta õpin IS117-es ja
+echo "aine tundub huvitav, kuid arvan, et läheb raskeks" # väljastab reavahetusega aine tundub huvitav, kuid arvan, et läheb raskeks
+#
+# skripti lõpp
