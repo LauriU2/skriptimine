@@ -1,0 +1,3 @@
+#!/bin/bash
+
+find /var -iname "*.log" -type f -exec wc -l {} + 2>/dev/null | sort -rn #otsib var kataloogis user kasutajale kättesaadavad .log lõpuga failid, kontrollib mitu rida on igas leitud failis ning väljastab failide nimekirja sorteeritud kahanemisjärjekorras vastavalt ridade arvule
