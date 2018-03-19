@@ -1,0 +1,23 @@
+#!/bin/bash
+#
+#Kandiku pindala
+echo -n "Sisestage kandiku pikkus ja laius cm-ides: "
+read pikkus laius
+kandik=`expr $pikkus \* $laius`
+echo "Kandiku suurus $kandik cm2"
+
+#Küpsiste laius ja pikkus cm-ides
+echo -n "Sisestage küpsise pikkus ja laius cm-ides: "
+read kpikkus klaius
+kypsis=`expr $kpikkus \* $klaius`
+echo "Küpsise suurus on $kypsis cm2"
+
+#Mitu küpsist ühes pakis
+echo -n "Sisestage mitu küpsist ühes pakis tahate: "
+read pakis
+
+#Mitu küpsist mahub ühte kihti
+echo -n "Sisestage mitu küpsist kihis tahate: "
+read kiht
+kihtide_arv=`expr $kandik / $kypsis \* $kiht / $pakis`
+echo "Tordile tuleb ühes kihis $kihtide_arv küpsist"
