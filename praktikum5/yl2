@@ -1,0 +1,19 @@
+#!/bin/bash
+#
+echo -n "Sisesta kolmnurga esimene külg cm-ides: "
+read a
+
+echo -n "Sisesta kolmnurga teine külg cm-ides: "
+read b
+
+echo -n "Sisesta kolmnurga kolmas külg cm-ides: "
+read c
+
+ymbermoot=$(echo "scale=2;($a+$b+$c)/2" | bc -l )
+esimene=$(echo "scale=2;$ymbermoot-$a" | bc -l )
+teine=$(echo "scale=2;$ymbermoot-$b" | bc -l )
+kolmas=$(echo "scale=2;$ymbermoot-$c" | bc -l )
+kokku=$(echo "scale=2;$ymbermoot*$esimene*$teine*$kolmas" | bc -l )
+pindala=$(echo "scale=2;sqrt($kokku)" | bc -l )
+
+echo "Kolmnurga pindala on $pindala cm2"
