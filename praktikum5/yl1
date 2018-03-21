@@ -1,0 +1,12 @@
+#!/bin/bash
+#
+echo -n "Sisesta kolmurga esimene külg cm-ides: "
+read a
+
+echo -n "Sisesta kolmurga teine külg cm-ides: "
+read b
+
+hypotenuus=`expr $a \* $a + $b \* $b` #arvutab kahe külje korrutise
+calc=$(echo "scale=2; sqrt($hypotenuus)" | bc ) #arvutab kolmanda külje ruutjuure
+echo "Kolmnurga hüpotenuus on: $calc cm"
+
