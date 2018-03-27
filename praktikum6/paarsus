@@ -1,0 +1,19 @@
+#!/bin/bash
+#
+# Arvu paarsuse arvutamine
+#
+if test $# -ne 1;
+then
+echo "Kasutamise seletus"
+echo "$0 on täisarv"
+else
+	jaak=$(($1 % 2))
+# Kui jääk on 0 - arv on paaris
+	if test $jaak -eq 0
+	then
+	echo "Antud arv on paaris"
+	else
+	echo "Antud arv on paaritu"
+	fi
+fi
+
