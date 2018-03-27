@@ -1,0 +1,16 @@
+#!/bin/bash
+#
+# Arvu paarsuse arvutamine
+#
+echo -n "Sisesta täisarv: " # Küsime arvu
+read arv
+# Jäägi arvutamine 2-ga jagamisel
+jaak=$(( $arv % 2))
+# Kui jääk on 0 - tegu in paaris arvuga
+if [ $jaak -eq 0 ]
+then
+	echo "Antud arv on paaris"
+else
+	echo "Antud arv on paaritu"
+fi # if lause lõpp
+
