@@ -1,0 +1,21 @@
+#!/bin/bash
+#
+#Busside arvutamine
+echo -n "Sisesta grupi suurus: "
+read suurus
+echo -n "Sisesta kohtade arv bussis: "
+read kohad
+
+taidetud=`expr $suurus / $kohad`
+echo "Läheb vaja $taidetud bussi"
+
+mahajaanud=`expr $suurus % $kohad`
+echo "Mahajäänud inimesi on $mahajaanud"
+
+bussid=$(($suurus / $kohad))
+# Kui ei mahtunud on suurem kui 0, siis suurendame busside arvu 1 võrra
+if [ $mahajaanud -gt 0 ]; then
+	bussid=$(($bussid +1))
+fi
+
+echo "Kokku läheb vaja $bussid bussi"
