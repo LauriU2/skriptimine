@@ -1,0 +1,22 @@
+#!/bin/bash
+#
+aeg=`date | cut -c12-13` #Arvestab masina kellaaega
+if [ $aeg -ge 6 -a $aeg -lt 12 ]; then
+	tervitus="Tere hommikust, "
+	else
+	if [ $aeg -ge 12 -a $aeg -lt 18 ]; then
+		tervitus="Tere päevast, "
+		else
+		if [ $aeg -ge 18 -a $aeg -le 22 ]; then
+			tervitus="Tere õhtust, "
+			else
+			if [ $aeg -gt 22 -a $aeg -le 24 -o $aeg -gt 0 -a $aeg -lt 6 ]; then
+				tervitus="Head ööd, "
+			fi
+		fi
+	fi
+fi
+echo -n "$tervitus"
+echo -n `whoami | cut -f1 -d"." | cut -c1 | tr [:lower:] [:upper:]`
+echo -n `whoami | cut -f1 -d"." | cut -c2-`
+echo "!"
