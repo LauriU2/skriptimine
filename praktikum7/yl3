@@ -1,0 +1,21 @@
+#!/bin/bash
+#
+echo -n "Sisesta kellaaeg tundides: "
+read aeg
+if [ $aeg -ge 6 -a $aeg -lt 12 ]; then
+	echo "Tere hommikust!"
+	else
+	if [ $aeg -ge 12 -a $aeg -lt 18 ]; then
+		echo "Tere päevast!"
+		else
+		if [ $aeg -ge 18 -a $aeg -le 22 ]; then
+			echo "Tere õhtust!"
+			else
+			if [ $aeg -gt 22 -a $aeg -le 24 -o $aeg -gt 0 -a $aeg -lt 6 ]; then
+				echo "Head ööd!"
+				else
+				echo "Vigane sisend, sisesta aeg vahemikus 1-24"
+			fi
+		fi
+	fi
+fi
