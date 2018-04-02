@@ -1,0 +1,12 @@
+#!/bin/bash
+#
+# foreach tsükliga
+arvud='1 2 3 4 5 6 7 8 9 10' # nimekiri arvudest, mida kasutada
+summa=0 # tulev summma
+for arv in $arvud
+do
+	if [ $(($arv % 2)) -eq 0 ]; then # leiab paarisarvud
+	summa=$(($summa + $arv))
+	fi
+done
+echo "Arvude 1-10 paarisarvude summa on $summa"
