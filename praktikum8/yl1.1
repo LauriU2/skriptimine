@@ -1,0 +1,11 @@
+#!/bin/bash
+#
+# for tsükliga
+summa=0 # tulev summa
+for((arv=1; arv<=10; arv++))
+do
+	if [ $(($arv % 2)) -eq 0 ]; then # leiab paarisarvud
+	summa=$(($summa + $arv))
+	fi
+done
+echo "Arvude 1-10 paarisarvude summa on $summa"
