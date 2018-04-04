@@ -1,9 +1,9 @@
 #!/bin/bash
 #
-for (( i = 1; i <= 5; i++ )) # Väline for tsükkel
+for (( i = 1; i <= 5; i++ )) # Väline for tsükkel, mitu rida tuleb
 do
 	echo -n "$i. "
-	for (( j = 1; j <= 5; j++ )) # Sisemine for tsükkel
+	for (( j = 1; j <= 5; j++ )) # Sisemine for tsükkel, mitu tärni tuleb
 	do
 		echo -n "* "
 	done
