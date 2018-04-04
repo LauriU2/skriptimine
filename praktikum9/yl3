@@ -1,0 +1,26 @@
+#!/bin/bash
+#
+echo -n "Sisesta ridade arv: "
+read rida
+echo -n "Sisesta tärnide arv reas: "
+read tarn
+for (( i = 1; i <= $rida; i++ )) # Väline for tsükkel, mitu rida tuleb
+do
+	echo -n "$i. "
+	if [ $i -eq 1 -o $i -eq $rida ]; then
+	for (( j = 1; j <= $tarn; j++ )) # Sisemine for tsükkel, mitu tärni tuleb
+	do
+		echo -n "* "
+	done
+# Teised read
+	else
+	echo -n "* "
+# Tühikud
+		for((j = 2; j < $tarn; j++))
+		do
+			echo -n "  "
+		done
+			echo -n "* "
+	fi
+echo "" # Prindib järgmise rea
+done
