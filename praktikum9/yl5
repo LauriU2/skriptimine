@@ -1,0 +1,17 @@
+#!/bin/bash
+#
+echo -n "Sisesta ridade arv: "
+read rida
+for (( i = 1; i <= $rida; i++ )) # Väline for tsükkel, mitu rida tuleb
+do
+	echo -n "$i. "
+	for (( j = $rida - 1; j >= i; j-- )) # Sisemine for tsükkel, mitu tärni tuleb
+	do
+		echo -n "0 "
+	done
+	for (( j = 1; j <= i; j++ ))
+	do
+		echo -n "* "
+	done
+echo "" # Prindib järgmise rea
+done
