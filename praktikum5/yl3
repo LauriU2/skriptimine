@@ -1,0 +1,21 @@
+#!/bin/bash
+#
+Pyhapaev=0
+Esmaspaev=1
+Teisipaev=2
+Kolmapaev=3
+Neljapaev=4
+Reede=5
+Laupaev=6
+
+echo -n "Sisesta millal sõidad ära: "
+read a
+
+echo -n "Sisesta reisi ööpäevade arv: "
+read b
+
+# Reisimise täisnädalate arv ja kui reisipäevi jääb üle
+reisi_paevad=$(($b % 7))
+# Tagasi arvutus
+tagasi=$(($a + $reisi_paevad))
+echo "Tagasi oled päeval number $tagasi"
